@@ -98,23 +98,6 @@ function convertJSONToCSV() {
         document.getElementById("csvOutput").textContent = "Invalid JSON";
     }
 }
-
-// function convertCSVToJSON() {
-//     try {
-//         const [header, ...rows] =
-//             document.getElementById("csvToJSONInput").value.trim().split("\n");
-//         const keys = header.split(",");
-//         const json = rows.map(row =>
-//             Object.fromEntries(
-//                 row.split(",").map((val, i) => [keys[i], val.trim()])
-//             )
-//         );
-//         document.getElementById("jsonOutput").textContent =
-//             JSON.stringify(json, null, 2);
-//     } catch {
-//         document.getElementById("jsonOutput").textContent = "Invalid CSV";
-//     }
-// }
 function convertCSVToJSON() {
     try {
         let lines = document.getElementById("csvToJSONInput").value.split("\n");
@@ -130,15 +113,6 @@ function convertCSVToJSON() {
         document.getElementById("jsonOutput").textContent = "Invalid CSV";
     }
 }
-//async function createHash() {
-//     const input = document.getElementById("hashInput").value;
-//     const encoder = new TextEncoder();
-//     const data = encoder.encode(input);
-//     const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-//     const hashArray = Array.from(new Uint8Array(hashBuffer));
-//     const hashHex = hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
-//     document.getElementById("hashOutput").textContent = hashHex;
-// }
 async function createHash() {
     let text = document.getElementById("hashInput").value;
     let data = new TextEncoder().encode(text);
