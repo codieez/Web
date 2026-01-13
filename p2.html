@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Timetable 5A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+            text-align: center;
+        }
+        table {
+            margin: 20px auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+            box-shadow: 4px 6px 15px rgba(0,0,0,0.2);
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            min-width: 90px;
+        }
+        th {
+            background-color: lightgray;
+        }
+        .day {
+            position: sticky;
+            left: 0;
+            background-color: skyblue;
+            z-index: 2;
+        }
+        th {
+            position: sticky;
+            top: 0;
+            z-index: 3;
+        }
+        tr:hover td {
+            background-color: cornsilk !important;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+        }
+        td:hover {
+            background-color: lightyellow !important;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.4);
+            transform: scale(1.05);
+        }
+        .lab { background-color: lightgreen; }
+        .soft { background-color: peachpuff; }
+        .forum { background-color: lightblue; }
+        .break { background-color: lightcoral; }
+        .ai { background-color: lavender; }
+        .time { background-color: lightyellow; }
+        .morning { background-color: palegreen; font-weight: bold; }
+        .afternoon { background-color: moccasin; font-weight: bold; }
+        h2 {
+            color: darkgreen;
+            text-align: center;
+            text-shadow: 1px 1px 3px gray;
+        }
+        p {
+            text-align: center;
+            font-size: 14px;
+        }
+        .legend {
+            margin: 20px auto;
+            border: 1px solid black;
+            width: 60%;
+            padding: 15px;
+            text-align: left;
+            background: white;
+            box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+            border-radius: 12px;
+        }
+        .legend h3 {
+            margin-top: 0;
+            text-align: center;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 6px 0;
+            font-size: 14px;
+        }
+        .box {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            border: 1px solid black;
+        }
+        .table-container {
+            overflow-x: auto;
+            max-width: 95%;
+            margin: auto;
+            border-radius: 12px;
+        }
+    </style> 
+</head>
+<body>
+    <h2>Class Timetable for Academic Year 2025-2026 (Odd Semester)</h2>
+    <p><b>Sem & Section:</b> 5A<br>
+       <b>Class Coordinator:</b> Mrs. Reshma<br>
+       <b>Room Number:</b> AI06-2F05-LH</p>
+
+    <div class="table-container">
+    <table>
+        <tr>
+            <th class="day">Day / Time</th>
+            <th class="time">8:45-9:40</th>
+            <th class="time">9:40-10:35</th>
+            <th class="time">10:35-10:50</th>
+            <th class="time">10:50-11:45</th>
+            <th class="time">11:45-12:40</th>
+            <th class="time">12:40-1:40</th>
+            <th class="time">1:40-2:35</th>
+            <th class="time">2:35-3:30</th>
+            <th class="time">3:30-4:25</th>
+            <th class="time">4:25-5:20</th>
+        </tr>
+        <tr>
+            <td class="morning day" colspan="6">Morning Session</td>
+            <td class="afternoon" colspan="5">Afternoon Session</td>
+        </tr>
+        <tr>
+            <td class="day">Monday</td>
+            <td>TOC</td>
+            <td>TOC</td>
+            <td rowspan="5" class="break">Tea Break</td>
+            <td>CN</td>
+            <td>SE</td>
+            <td rowspan="5" class="break">Lunch Break</td>
+            <td colspan="2" class="lab">A1 – WEB LAB</td>
+            <td>SE</td>
+            <td>RM</td>
+        </tr>
+        <tr>
+            <td class="day">Tuesday</td>
+            <td colspan="2" class="soft">Soft skills</td>
+            <td colspan="2" class="lab">CN LAB</td>
+            <td>SE</td>
+            <td>RM</td>
+            <td class="ai">AI</td>
+        </tr>
+        <tr>
+            <td class="day">Wednesday</td>
+            <td colspan="2" class="lab">A2 – WEB LAB</td>
+            <td class="ai">AI</td>
+            <td>RM</td>
+            <td>TOC</td>
+            <td colspan="2" class="forum">Forum Activity</td>
+        </tr>
+        <tr>
+            <td class="day">Thursday</td>
+            <td>SE</td>
+            <td>CN</td>
+            <td>RM</td>
+            <td>TOC</td>
+            <td colspan="2" class="soft">Soft skills</td>
+            <td class="ai">AI</td>
+        </tr>
+        <tr>
+            <td class="day">Friday</td>
+            <td>TOC</td>
+            <td>EVS</td>
+            <td>SE</td>
+            <td>RM</td>
+            <td class="ai">AI</td>
+            <td>CN</td>
+        </tr>
+    </table>
+    </div>
+
+    <div class="legend">
+        <h3>Legend</h3>
+        <div class="legend-item"><div class="box lab"></div> Web = Web Technology Lab</div>
+        <div class="legend-item"><div class="box soft"></div> Soft Skills</div>
+        <div class="legend-item"><div class="box forum"></div> Forum Activity</div>
+        <div class="legend-item"><div class="box break"></div> Tea / Lunch Break</div>
+        <div class="legend-item"><div class="box ai"></div> AI = Artificial Intelligence (Elective Subject)</div>
+        <div class="legend-item"><div class="box morning"></div> Morning Session</div>
+        <div class="legend-item"><div class="box afternoon"></div> Afternoon Session</div>
+        <br>
+        <p><b>Subject Full Forms:</b><br>
+        SE = Software Engineering & Project Management,<br>
+        CN = Computer Networks,<br>
+        Web = Web Technology Lab,<br>
+        AI = Artificial Intelligence,<br>
+        RM = Research Methodology and IPR,<br>
+        TOC = Theory Of Computation,<br>
+        EVS = Environmental Studies</p>
+    </div>
+</body>
+</html>

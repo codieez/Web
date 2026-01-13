@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JQueries</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body style="font-size:x-large;">
+
+<p id="append">Click on me to find What do you call a polite ghost's first words? </p><br>
+
+<p id="remove">I'm a temporary thought... click me, and POOF, I'm gone!</p><br>
+
+<p id="styling">Click me for a makeover... I'm going from plain to FABULOUS!</p><br>
+
+<p id="animation">Click me, and watch me dance like I just got promoted!</p>
+
+<script>
+$(document).ready(function (){
+
+    $("#append").click(function(){
+        $(this).append("Hello!!");
+    });
+
+    $('#remove').click(function(){
+        $(this).remove();
+    });
+
+    $("#styling").click(function(){
+        $(this).css({
+            "color": "#2C3E50",
+            "background-color": "#ECF0F1",
+            "padding": "5px",
+            "border-radius": "8px"
+        });
+    });
+
+    $("#animation").click(function() {
+        $(this).animate({ 
+            fontSize: "1.5em", 
+            letterSpacing: "2px" 
+        }, 500).css("color", "#4B88A2");
+    });
+
+});
+</script>
+
+</body>
+</html>
